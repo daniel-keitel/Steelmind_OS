@@ -1,0 +1,31 @@
+[package]
+name = "user_app"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+lazy_static = {version = "1.0", features = ["spin_no_std"]}
+spin = "0.9.8"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+test = false            
+doctest = false 
+
+[[bin]]
+name = "test"
+path = "src/test.rs"
+test = false            
+doctest = false 
+
+
+[profile.release-lto]
+inherits = "release"
+lto = true
+
+[profile.opt-dev]
+inherits = "dev"
+opt-level = 3
+codegen-units = 16

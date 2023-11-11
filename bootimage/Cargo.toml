@@ -1,0 +1,12 @@
+[package]
+name = "bootimage"
+version = "0.1.0"
+edition = "2021"
+default-run = "bootimage"
+ 
+[dependencies]
+ovmf-prebuilt = "0.1.0-alpha.1"
+bootloader = "0.11.4"
+tempfile = "3.8.1"
+pruefung = "0.2.1"
+clap = {version = "4.4.7", features = ["derive"]}

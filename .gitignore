@@ -1,0 +1,7 @@
+/.vscode/
+/target/
+/bootimage/out
+/user_app/target/
+/kernel.log
+/kernel_last.log
+/user_app/.vscode/

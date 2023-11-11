@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "kernel",
+    "bootimage"
+]
+
+exclude = ["user_app"]
+
+[profile.dev.package.bootimage]
+opt-level = 3
+
+[profile.test.package.bootimage]
+opt-level = 3
+
+
+[profile.release-lto]
+inherits = "release"
+lto = true
+
+[profile.opt-dev]
+inherits = "dev"
+opt-level = 3
+codegen-units = 16
